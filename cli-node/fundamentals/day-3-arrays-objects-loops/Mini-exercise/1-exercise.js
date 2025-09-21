@@ -5,6 +5,13 @@ Ejercicio 1 – Arrays
 - Transformar el array usando map.
 - Filtrar solo números pares con filter.
 - Calcular la suma de todos los elementos con reduce.
+
+- Create an array of numbers.
+- Add and remove elements using push, pop, shift, and unshift.
+- Transform the array using map.
+- Filter only even numbers using filter.
+- Calculate the sum of all elements using reduce.
+
 */
 
 

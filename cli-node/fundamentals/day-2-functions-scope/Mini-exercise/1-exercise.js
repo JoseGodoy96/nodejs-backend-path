@@ -4,6 +4,13 @@ Ejercicio 1 – Calculadora simple
 Crea 4 funciones: add, subtract, multiply, divide.
 Cada una debe recibir 2 números y devolver el resultado.
 La función divide debe manejar el caso de división entre 0.
+
+Exercise 1 – Simple Calculator
+
+Create 4 functions: add, subtract, multiply, divide.
+Each function should take 2 numbers as input and return the result.
+The divide function should handle the case of division by 0.
+
 */
 
 let a = 5;

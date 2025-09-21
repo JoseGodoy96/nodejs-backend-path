@@ -4,6 +4,11 @@ Ejercicio 4 – getUser simulado
 - Primero implementa con callbacks.
 - Luego reescribe usando Promises.
 - Finalmente reescribe usando async/await.
+
+- Create a function getUser(id) that simulates fetching user data after 1.5 seconds.
+- First, implement it using callbacks.
+- Then, rewrite it using Promises.
+- Finally, rewrite it using async/await.
 */
 
 function getUserCallback(id, callback) {

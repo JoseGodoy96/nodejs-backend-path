@@ -2,6 +2,11 @@
 Ejercicio 2 – Función promedio
 
 Escribe una función average(numbers) que reciba un array de números y devuelva su promedio.
+
+Exercise 2 – Average Function
+
+Write a function average(numbers) that takes an array of numbers and returns their average.
+
 */
 
 function average(numbers) {
