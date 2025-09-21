@@ -53,7 +53,7 @@ async function loadUser() {
 		const user = await getUserAsync(3);
 		console.log("Con async/await:", user);
 	} catch (error) {
-	console.error(error);
+		console.error(error);
 	}
 }
 
