@@ -34,7 +34,6 @@ const user3 = {
 const users = [user1, user2, user3];
 
 rl.setPrompt("Elige una opcion (1-3): ");
-rl.prompt();
 
 rl.question("Hola, como te llamas? ", (nombre) => {
 	console.log(`Hola, ${nombre}`);
@@ -42,20 +41,32 @@ rl.question("Hola, como te llamas? ", (nombre) => {
 	console.log("1. Agregar contacto");
 	console.log("2. Ver todos los contactos");
 	console.log("3. Salir");
+	rl.prompt();
 	rl.on("line", (input) => {
 		if (input === "1") {
 			rl.question("Nombre del contacto: ", (nombreContacto) => {
 				rl.question("Numero de telefono: ", (telefonoContacto) => {
 					rl.question("Introduzca un email: ", (emailContacto) => {
-						
+						let newNumber = Number(telefonoContacto);
+						let newUser = {
+							nombre: nombreContacto,
+							telefono: newNumber,
+							email: emailContacto
+						};
+						users.push(newUser);
+						console.log("Contacto añadido satisfactoriamente. Regresando al menu de contactos.");
+						rl.prompt();
 					})
 				});
 			})
 		} else if (input === "2") {
 			for (const user of users) {
-				console.log(user.nombre);
+				console.log(`${user.nombre} - ${user.telefono} - ${user.email}`);
 			}
+			console.log("Esos son todos los contactos.");
+			rl.prompt();
 		} else if (input === "3") {
+			console.log("Saliendo del menu de contactos.");
 			rl.close();
 			return;
 		} else {
