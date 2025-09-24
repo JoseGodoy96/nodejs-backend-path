@@ -1,0 +1,25 @@
+{
+  "administrators": [
+    {
+      "username": "admin",
+      "password": 1234
+    }
+  ],
+  "libraryBooks": [
+    {
+      "title": "El Quijote",
+      "author": "Miguel de Cervantes",
+      "pages": 863
+    },
+    {
+      "title": "1984",
+      "author": "George Orwell",
+      "pages": 328
+    },
+    {
+      "title": "Cien años de soledad",
+      "author": "Gabriel García Márquez",
+      "pages": 417
+    }
+  ]
+}
