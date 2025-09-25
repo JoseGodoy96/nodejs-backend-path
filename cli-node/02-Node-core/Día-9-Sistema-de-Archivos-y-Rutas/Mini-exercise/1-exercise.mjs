@@ -7,3 +7,8 @@ Exercise 1 (EN):
 - Create a "test.txt" file and write a message inside.
 - Then read it and log the content to the console.
 */
+
+import fs from "fs";
+
+const file = fs.readFileSync("test.txt", "utf8");
+console.log(file);
