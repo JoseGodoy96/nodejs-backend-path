@@ -10,3 +10,5 @@ Exercise 2 (EN):
 
 import fs from "fs";
 
+const file = fs.readFileSync("archivo.txt", "utf8");
+console.log(file);
