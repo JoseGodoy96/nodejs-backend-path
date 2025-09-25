@@ -1,0 +1,32 @@
+{
+ "usuarios": [
+  {
+   "nombre": "Antonio",
+   "contra": 1234
+  },
+  {
+   "nombre": "Manolo",
+   "contra": 1234
+  },
+  {
+   "nombre": "Juan",
+   "contra": 1234
+  },
+  {
+   "nombre": "Jose",
+   "contra": 1234
+  },
+  {
+   "nombre": "jesus",
+   "contra": "1234"
+  },
+  {
+   "nombre": "Cristian",
+   "contra": "1234"
+  },
+  {
+   "nombre": "asdf",
+   "contra": "1234"
+  }
+ ]
+}
