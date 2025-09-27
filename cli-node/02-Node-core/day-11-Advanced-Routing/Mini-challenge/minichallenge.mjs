@@ -15,3 +15,10 @@ Mini-Challenge (EN):
 	3. "/products/:id" → return JSON with mock product information
 - If the route does not exist → return { error: "Route not found" } with status 404.
 */
+
+import { server } from "./routes.mjs";
+
+
+server.listen(3000, () => {
+	console.log("Servidor activado pulse aqui -> http://localhost:3000");
+});
