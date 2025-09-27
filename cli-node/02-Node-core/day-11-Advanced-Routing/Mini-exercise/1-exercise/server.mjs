@@ -7,3 +7,10 @@ Exercise 1 (EN):
 - Refactor the previous day's server to move routes into a separate file (routes.js).
 - Import that file in server.js and use the functions.
 */
+
+import { server } from "./routes.mjs";
+
+
+server.listen(3000, () => {
+	console.log("Servidor activado pulse aqui -> http://localhost:3000");
+});
