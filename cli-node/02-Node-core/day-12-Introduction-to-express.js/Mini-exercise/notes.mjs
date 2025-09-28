@@ -78,7 +78,7 @@ app.use((err, req, res, next) => {
 
 import express from "express";
 const app = express();
-app.use(express.json());
+
 
 app.get("/", (req, res) => res.send("Bienvenido 🚀"));
 app.get("/time", (req, res) => {
