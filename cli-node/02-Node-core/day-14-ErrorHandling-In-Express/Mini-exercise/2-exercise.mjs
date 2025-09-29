@@ -13,11 +13,6 @@ const app = express();
 const PORT = 3000;
 app.use(express.json());
 
-app.use((err, req, res, next) => {
-    console.error(err.stack);
-    res.status(err.status || 500).json({ error: err.message || "Algo salió mal" });
-});
-
 app.get("/", (req, res) => res.send("Servidor con middlewares"));
 app.get("/divide/:a/:b", (req, res, next) => {
     const a = Number(req.params.a);
@@ -33,6 +28,11 @@ app.get("/divide/:a/:b", (req, res, next) => {
 });
 
 app.use((req, res) => res.status(404).send("404 - No encontrada"));
+
+app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(err.status || 500).json({ error: err.message || "Algo salió mal" });
+});
 
 app.listen(PORT, () => {
 	console.log(`Servidor activo en http://localhost:${PORT}`);
