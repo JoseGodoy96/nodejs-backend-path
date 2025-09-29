@@ -5,3 +5,4 @@ Ejercicio 3 (ES):
 Exercise 3 (EN):
 - Apply a middleware only to the "/admin" route that blocks the request (res.send("Access denied")).
 */
+
