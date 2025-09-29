@@ -55,7 +55,6 @@ app.use(express.static("public"));
 
 // Routers (modularizacion)
 
-import express from "express";
 const router = express.Router();
 
 router.get("/", (req, res) => res.send("Lista de productos"));
@@ -76,8 +75,7 @@ app.use((err, req, res, next) => {
 
 // Ejemplo completo
 
-import express from "express";
-const app = express();
+const app1 = express();
 
 
 app.get("/", (req, res) => res.send("Bienvenido 🚀"));
