@@ -51,3 +51,10 @@ Build a **Node.js HTTP server without Express** that handles:
 
 ## 📂 Estructura sugerida / Suggested Structure
 
+– Node.js Core Introduction
+– File System & Path
+– HTTP Server & Routing
+– Advanced Routing & Modularization
+– Introduction to Express.js
+– Express Middlewares
+– Error Handling in Express
