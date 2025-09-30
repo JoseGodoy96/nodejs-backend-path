@@ -4,3 +4,4 @@ Ejercicio 2 (ES):
 Exercise 2 (EN):
 - Create a GET "/users" route that returns a mock array of users in JSON.
 */
+
