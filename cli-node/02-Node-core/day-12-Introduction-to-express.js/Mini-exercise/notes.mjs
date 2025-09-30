@@ -11,10 +11,10 @@ app.listen(PORT, () => {
 
 // Rutas basicas
 
-app.get("/", (req, res) => res.send("GET en /"));
-app.post("/", (req, res) => res.send("POST en /"));
-app.put("/", (req, res) => res.send("PUT en /"));
-app.delete("/", (req, res) => res.send("DELETE en /"));
+app.get("/", (req, res) => res.send("GET en /"));			// Obtener informacion
+app.post("/", (req, res) => res.send("POST en /"));			// Enviar / Crear informacion
+app.put("/", (req, res) => res.send("PUT en /"));			// Actualizar informacion
+app.delete("/", (req, res) => res.send("DELETE en /"));		// Eliminar informacion
 
 
 // Respuestas
