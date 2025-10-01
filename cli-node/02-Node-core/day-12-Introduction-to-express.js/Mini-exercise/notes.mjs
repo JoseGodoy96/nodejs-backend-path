@@ -8,14 +8,12 @@ app.listen(PORT, () => {
 	console.log(`Servidor activo en http://localhost:${PORT}`);
 });
 
-
 // Rutas basicas
 
 app.get("/", (req, res) => res.send("GET en /"));			// Obtener informacion
 app.post("/", (req, res) => res.send("POST en /"));			// Enviar / Crear informacion
 app.put("/", (req, res) => res.send("PUT en /"));			// Actualizar informacion
 app.delete("/", (req, res) => res.send("DELETE en /"));		// Eliminar informacion
-
 
 // Respuestas
 
