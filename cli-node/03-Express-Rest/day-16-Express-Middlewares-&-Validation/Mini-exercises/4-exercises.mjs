@@ -4,3 +4,4 @@ Ejercicio 4 (ES):
 Exercise 4 (EN):
 - Implement a global error handling middleware that returns 500 on error.
 */
+
