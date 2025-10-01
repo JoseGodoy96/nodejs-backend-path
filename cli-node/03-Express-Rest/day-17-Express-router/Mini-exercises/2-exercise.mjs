@@ -35,7 +35,7 @@ usersRouter.get("/:id", (req, res) => {
 	res.json(user);
 });
 
-app.use()
+app.use("users", usersRouter);
 
 app.get("/", (req, res) => {
 	res.send("Bienvenido a express.js");
