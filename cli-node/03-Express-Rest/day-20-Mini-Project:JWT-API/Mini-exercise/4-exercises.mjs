@@ -68,7 +68,7 @@ app.post("/login", async (req, res) => {
 	if (!passwordLog)
 		return res.status(401).json({error: "El usuario o la contraseña es incorrecto"});
 	const token = jwt.sign({user: userLog.user}, JWT_SECRET, {expiresIn: "1h"});
-	res.json({message: "Login correcto", token});
+	res.status(200).json({message: "Login correcto", token});
 });
 
 app.get("/profile", authenticateToken, (req, res) => {

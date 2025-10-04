@@ -33,7 +33,16 @@ const usersScheme = Joi.object({
 const usersRouter = express.Router();
 
 usersRouter.post("/signup", async (req, res) => {
-	
+	const { error } = usersScheme.validate(req.body);
+	if (error)
+		return res.status(400).json({ error: error.details[0].message});
+	const { user, password } = req.body;
+	const userSign = users.find(u => u.user === user);
+	if (userSign)
+		return res.status(409).json({error: "El usuario ya extiste"});
+	const passworSign = await bcrypt.hash(password, 10);
+	users.push({ user, password: passworSign });
+	res.status(201).json({message: "usuario creado"});
 });
 
 app.use("/users", usersRouter);
