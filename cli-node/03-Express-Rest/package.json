@@ -4,5 +4,10 @@
     "express": "^5.1.0",
     "joi": "^18.0.1",
     "jsonwebtoken": "^9.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^9.37.0",
+    "eslint-config-strict": "^14.0.1",
+    "globals": "^16.4.0"
   }
 }
