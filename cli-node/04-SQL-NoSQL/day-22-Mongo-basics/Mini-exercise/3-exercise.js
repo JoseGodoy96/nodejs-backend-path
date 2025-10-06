@@ -4,3 +4,8 @@ Ejercicio 3 (ES):
 Exercise 3 (EN):
 - Find all users and print them to the console.
 */
+
+const database = 'blogDB';
+use(database);
+
+db.users.find();
