@@ -4,3 +4,8 @@ Ejercicio 5 (ES):
 Exercise 5 (EN):
 - Delete a specific user.
 */
+
+const database = 'blogDB';
+use(database);
+
+db.user.deleteOne({ username: "Manolo" });
