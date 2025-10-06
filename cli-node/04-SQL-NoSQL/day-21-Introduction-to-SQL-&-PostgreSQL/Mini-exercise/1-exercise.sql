@@ -4,3 +4,5 @@ Ejercicio 1 (ES):
 Exercise 1 (EN):
 - Create a database called "blogdb".
 */
+
+CREATE DATABASE blogdb;
