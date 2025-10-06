@@ -4,3 +4,7 @@ Ejercicio 1 (ES):
 Exercise 1 (EN):
 - Create a database called "blogDB".
 */
+
+const database = 'blogDB';
+use(database);
+
