@@ -19,7 +19,7 @@ const pool = new Pool({
 async function insertUser() {
 	try {
 		const text = 'INSERT INTO users (name, email) VALUES ($1, $2);';
-		const values = ['Juan', 'juan@example.com'];
+		const values = ['Jose', 'jose@example.com'];
 		const res = await pool.query(text, values);
 		console.log("Usuario insertado correctamente");
 	} catch (err) {
