@@ -4,3 +4,4 @@ Ejercicio 2 (ES):
 Exercise 2 (EN):
 - Create a "users" collection and insert 3 sample users.
 */
+
