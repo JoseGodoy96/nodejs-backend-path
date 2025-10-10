@@ -19,3 +19,34 @@ Mini-Challenge (EN):
 	4. Update a user and a post
 	5. Delete a user and a post
 */
+
+import express from 'express';
+import usersRouter from './routes/users.mjs';
+import postsRouter from './routes/posts.mjs';
+import { connectMongo } from './db/mongo.mjs';
+
+const app = express();
+const PORT = 3000;
+
+app.use(express.json());
+
+app.use("/users", usersRouter);
+app.use("/posts", postsRouter);
+
+app.get("/", (req, res) => {
+	res.send("Bienvenido al uso de MongoDB y PostgreSQL");
+});
+
+app.use((req, res) => res.status(404).json({ error: 'Ruta no encontrada' }));
+
+app.use((err, req, res, next) => {
+	console.error(err.stack);
+	res.status(500).json({ error: 'Error interno del servidor' });
+});
+
+async function startServer() {
+	await connectMongo();
+	app.listen(PORT, () => console.log(`Servidor activo en http://localhost:${PORT}`));
+}
+
+startServer();
