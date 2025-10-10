@@ -4,3 +4,5 @@ Ejercicio 6 (ES):
 Exercise 6 (EN):
 - Delete a user from both databases.
 */
+
+
