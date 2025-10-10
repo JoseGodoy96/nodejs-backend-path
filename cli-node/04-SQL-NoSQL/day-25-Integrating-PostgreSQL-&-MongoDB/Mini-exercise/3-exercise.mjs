@@ -34,7 +34,7 @@ async function getUserPost() {
 
 async function getUserMon() {
 	try {
-		const db = client.db("sample_mflix");
+		const db = client.db("example");
 		const collection = db.collection("users");	
 		const users = await collection.find().toArray();
 		console.log(users);	
