@@ -15,7 +15,6 @@ router.get('/', async (req, res, next) => {
 router.post('/', async (req, res, next) => {
 	try {
 		const { username, password } = req.body;	
-	  // Validación básica
 	if (!username || !password) {
 		return res.status(400).json({ error: 'username y password son requeridos' });
 	}	
