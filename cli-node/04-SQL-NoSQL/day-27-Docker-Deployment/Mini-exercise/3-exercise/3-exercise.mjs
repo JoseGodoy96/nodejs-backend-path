@@ -5,7 +5,6 @@ Exercise 3 (EN):
 - Start containers and test API routes.
 */
 
-
 import express from 'express';
 import pkg from 'pg';
 const { Pool } = pkg;
