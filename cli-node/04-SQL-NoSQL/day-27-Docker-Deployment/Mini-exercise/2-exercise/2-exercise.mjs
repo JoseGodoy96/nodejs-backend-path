@@ -5,13 +5,6 @@ Exercise 2 (EN):
 - Create docker-compose.yml to run API + PostgreSQL + MongoDB.
 */
 
-/*
-Ejercicio 2 (ES):
-- Configurar servicios para conectarse a PostgreSQL (users) y MongoDB (posts).
-Exercise 2 (EN):
-- Configure services to connect to PostgreSQL (users) and MongoDB (posts).
-*/
-
 import express from 'express';
 import pkg from 'pg';
 const { Pool } = pkg;
