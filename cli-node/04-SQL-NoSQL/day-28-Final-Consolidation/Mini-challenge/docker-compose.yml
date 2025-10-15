@@ -1,0 +1,45 @@
+version: '3.9'
+services:
+  api:
+    build: .
+    container_name: mini_api
+    ports:
+      - "3000:3000"
+    depends_on:
+      - postgres
+      - mongo
+    environment:
+      - PGUSER=txemita
+      - PGPASSWORD=mi_contraseña
+      - PGDATABASE=txemita
+      - PGHOST=postgres
+      - PGPORT=5432
+    volumes:
+      - .:/app
+
+  postgres:
+    image: postgres:16
+    container_name: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: txemita
+      POSTGRES_PASSWORD: mi_contraseña
+      POSTGRES_DB: txemita
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "5434:5432"
+
+  mongo:
+    image: mongo:7
+    container_name: mongo
+    restart: always
+    volumes:
+      - mongodata:/data/db
+    ports:
+      - "27018:27017"
+
+volumes:
+  pgdata:
+  mongodata:
