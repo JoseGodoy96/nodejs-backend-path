@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Roadmap/2.2. PostgreSQL.md",
+                "file": "Roadmap/1.1. JavaScript.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2.2. PostgreSQL"
+              "title": "1.1. JavaScript"
             }
           }
         ]
@@ -171,16 +171,16 @@
   },
   "active": "384e216cfb265e92",
   "lastOpenFiles": [
-    "Roadmap/2.4. MongoDB.md",
     "Roadmap/2.2. PostgreSQL.md",
+    "Roadmap/2.3. MySQL.md",
+    "Roadmap/2.4. MongoDB.md",
+    "Roadmap/2.5. Sequelize.md",
+    "Roadmap/2.6. Prisma.md",
     "Roadmap/02. Bases de datos.md",
     "Roadmap/2.1. SQL.md",
     "Roadmap/1.2. Express.md",
     "Roadmap/1.3. Joi.md",
     "Roadmap/2.7. Mongoose.md",
-    "Roadmap/2.5. Sequelize.md",
-    "Roadmap/2.6. Prisma.md",
-    "Roadmap/2.3. MySQL.md",
     "Roadmap/01. Backend Core.md",
     "Roadmap/-. Bienvenido a mi Roadmap .-.md",
     "().md",
