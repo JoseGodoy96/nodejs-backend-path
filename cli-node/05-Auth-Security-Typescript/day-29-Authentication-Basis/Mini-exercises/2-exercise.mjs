@@ -1,6 +1,6 @@
 /*
 Ejercicio 2 (ES):
-- Implementar registro de usuario con contraseña "hash" simulada o simple.
+- Implementar login básico validando email y password.
 Exercise 2 (EN):
-- Implement user registration with simple or simulated password hash.
+- Implement basic login validating email and password.
 */

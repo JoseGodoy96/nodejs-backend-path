@@ -1,6 +1,6 @@
 /*
 Ejercicio 3 (ES):
-- Implementar login básico validando email y password.
+- Crear middleware para proteger rutas privadas (verificar usuario logueado).
 Exercise 3 (EN):
-- Implement basic login validating email and password.
+- Create middleware to protect private routes (check logged-in user).
 */

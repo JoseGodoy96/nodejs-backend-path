@@ -1,6 +1,6 @@
 /*
 Ejercicio 4 (ES):
-- Crear middleware para proteger rutas privadas (verificar usuario logueado).
+- Documentar los endpoints en README o docs.md.
 Exercise 4 (EN):
-- Create middleware to protect private routes (check logged-in user).
+- Document your endpoints in README or docs.md.
 */
