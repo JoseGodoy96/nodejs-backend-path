@@ -18,7 +18,7 @@ interface User {
 	passwordHash: string;
 }
 
-const users: User[] = [];
+export const users: User[] = [];
 
 router.post("/", async (req: Request, res: Response, next: NextFunction) => {
 	try {

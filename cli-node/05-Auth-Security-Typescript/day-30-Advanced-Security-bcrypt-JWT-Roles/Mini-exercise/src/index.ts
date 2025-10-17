@@ -12,8 +12,16 @@ Exercise 2 (EN):
 - Install and configure bcrypt to hash passwords when registering users.
 */
 
+/*
+Ejercicio 3 (ES):
+- Instalar y configurar JWT para generar tokens al hacer login.
+Exercise 3 (EN):
+- Install and configure JWT to generate tokens at login.
+*/
+
 import express, { Request, Response, NextFunction } from "express";
 import registerRouter from './routes/register';
+import loginRouter from './routes/login';
 
 const app = express();
 const PORT = 3000;
@@ -32,6 +40,7 @@ app.use((req: Request, res: Response, next: NextFunction) => {
 app.get("/", (req, res) => res.send("Bienvenido a node.js con typescript"));
 
 app.use("/register", registerRouter);
+app.use("/login", loginRouter);
 
 // === Error handling ===
 
