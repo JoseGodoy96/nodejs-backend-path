@@ -26,6 +26,13 @@ Exercise 4 (EN):
 - Create middleware to validate JWT and extract user role.
 */
 
+/*
+Ejercicio 5 (ES):
+- Implementar middleware para proteger rutas según rol (admin/user).
+Exercise 5 (EN):
+- Implement middleware to protect routes based on role (admin/user).
+*/
+
 import express, { Request, Response, NextFunction } from "express";
 import registerRouter from './routes/register';
 import loginRouter from './routes/login';
@@ -53,11 +60,15 @@ app.use("/login", loginRouter);
 
 app.get("/profile", verifyToken, (req, res) => {
 	const user = (req as any).user;
-	res.json({ message: "Perfil de usuario", user });
+	res.json({ message: "Perfil del usuario", user });
 });
 
-app.get("/admin", verifyToken, checkRole("admin"), (req, res) => {
+app.get("/admin", verifyToken, checkRole(["admin"]), (req, res) => {
 	res.json({ message: "Bienvenido al panel de administración" });
+});
+
+app.get("/user", verifyToken, checkRole(["user", "admin"]), (req, res) => {
+	res.json({ message: "Bienvenido al área de usuario" });
 });
 
 // === Error handling ===
