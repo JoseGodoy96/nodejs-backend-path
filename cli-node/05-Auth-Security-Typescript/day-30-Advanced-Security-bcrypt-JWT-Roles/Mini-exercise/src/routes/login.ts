@@ -8,7 +8,7 @@ import { users } from "./register";
 const router = express.Router();
 
 const loginScheme = Joi.object({
-	username: Joi.string().min(3).max(10).required(),
+	username: Joi.string().min(3).max(20).required(),
 	password: Joi.string().required()
 });
 
@@ -27,11 +27,7 @@ router.post("/", async (req: Request, res: Response) => {
 	const isValid = await bcrypt.compare(password, user.passwordHash);
 	if (!isValid)
 		return res.status(401).json({ error: "Contraseña incorrecta" });
-	const token = jwt.sign(
-		{ username: user.username }, 
-		process.env.JWT_SECRET || "claveSecreta", 
-		{ expiresIn: "1h" }
-	);
+	const token = jwt.sign({ username: user.username, role: user.role }, process.env.JWT_SECRET || "claveSecreta", { expiresIn: "1h" });
 	res.json({ message: "Login correcto", token });
 })
 

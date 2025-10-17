@@ -19,9 +19,18 @@ Exercise 3 (EN):
 - Install and configure JWT to generate tokens at login.
 */
 
+/*
+Ejercicio 4 (ES):
+- Crear middleware que valide el JWT y extraiga el rol del usuario.
+Exercise 4 (EN):
+- Create middleware to validate JWT and extract user role.
+*/
+
 import express, { Request, Response, NextFunction } from "express";
 import registerRouter from './routes/register';
 import loginRouter from './routes/login';
+import { verifyToken } from './middlewares/middlewares';
+import { checkRole } from './middlewares/checkrole';
 
 const app = express();
 const PORT = 3000;
@@ -41,6 +50,15 @@ app.get("/", (req, res) => res.send("Bienvenido a node.js con typescript"));
 
 app.use("/register", registerRouter);
 app.use("/login", loginRouter);
+
+app.get("/profile", verifyToken, (req, res) => {
+	const user = (req as any).user;
+	res.json({ message: "Perfil de usuario", user });
+});
+
+app.get("/admin", verifyToken, checkRole("admin"), (req, res) => {
+	res.json({ message: "Bienvenido al panel de administración" });
+});
 
 // === Error handling ===
 

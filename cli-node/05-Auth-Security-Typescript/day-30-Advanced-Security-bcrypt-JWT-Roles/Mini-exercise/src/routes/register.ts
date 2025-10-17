@@ -6,7 +6,8 @@ const router = express.Router();
 
 const registerScheme = Joi.object({
 	username: Joi.string().min(3).max(20).required(),
-	password: Joi.string().required()
+	password: Joi.string().required(),
+	role: Joi.string().valid("user", "admin").default("user")
 });
 
 router.get("/", (req: Request, res: Response) => {
@@ -16,6 +17,7 @@ router.get("/", (req: Request, res: Response) => {
 interface User {
 	username: string;
 	passwordHash: string;
+	role: string;
 }
 
 export const users: User[] = [];
@@ -25,9 +27,9 @@ router.post("/", async (req: Request, res: Response, next: NextFunction) => {
 		const { error } = registerScheme.validate(req.body);
 		if (error)
 			return res.status(400).json({ error: error.details[0].message });
-		const { username, password } = req.body;
+		const { username, password, role } = req.body;
 		const passwordHash = await bcrypt.hash(password, 10);
-		users.push({ username, passwordHash });
+		users.push({ username, passwordHash, role });
 		res.status(201).json({ message: "Usuario registrado correctamente" });
 	} catch (err) {
 		next(err);

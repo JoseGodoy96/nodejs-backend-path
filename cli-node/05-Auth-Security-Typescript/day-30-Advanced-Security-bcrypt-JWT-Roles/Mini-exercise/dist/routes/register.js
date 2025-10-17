@@ -3,6 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.users = void 0;
 const express_1 = __importDefault(require("express"));
 const joi_1 = __importDefault(require("joi"));
 const bcrypt_1 = __importDefault(require("bcrypt"));
@@ -14,7 +15,7 @@ const registerScheme = joi_1.default.object({
 router.get("/", (req, res) => {
     res.send("Bienvenido a la ruta de registro");
 });
-const users = [];
+exports.users = [];
 router.post("/", async (req, res, next) => {
     try {
         const { error } = registerScheme.validate(req.body);
@@ -22,7 +23,7 @@ router.post("/", async (req, res, next) => {
             return res.status(400).json({ error: error.details[0].message });
         const { username, password } = req.body;
         const passwordHash = await bcrypt_1.default.hash(password, 10);
-        users.push({ username, passwordHash });
+        exports.users.push({ username, passwordHash });
         res.status(201).json({ message: "Usuario registrado correctamente" });
     }
     catch (err) {
