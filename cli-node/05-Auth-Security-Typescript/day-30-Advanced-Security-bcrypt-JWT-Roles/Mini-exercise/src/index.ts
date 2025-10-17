@@ -33,6 +33,13 @@ Exercise 5 (EN):
 - Implement middleware to protect routes based on role (admin/user).
 */
 
+/*
+Ejercicio 6 (ES):
+- Validar entradas usando Joi o Zod antes de guardar en la base de datos.
+Exercise 6 (EN):
+- Validate inputs using Joi or Zod before saving to the database.
+*/
+
 import express, { Request, Response, NextFunction } from "express";
 import registerRouter from './routes/register';
 import loginRouter from './routes/login';
