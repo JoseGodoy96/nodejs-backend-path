@@ -5,7 +5,15 @@ Exercise 1 (EN):
 - Create Node.js project with TypeScript and folders /src, /routes, /controllers, /middlewares.
 */
 
+/*
+Ejercicio 2 (ES):
+- Instalar y configurar bcrypt para hashear contraseñas al registrar usuarios.
+Exercise 2 (EN):
+- Install and configure bcrypt to hash passwords when registering users.
+*/
+
 import express, { Request, Response, NextFunction } from "express";
+import registerRouter from './routes/register';
 
 const app = express();
 const PORT = 3000;
@@ -23,6 +31,7 @@ app.use((req: Request, res: Response, next: NextFunction) => {
 
 app.get("/", (req, res) => res.send("Bienvenido a node.js con typescript"));
 
+app.use("/register", registerRouter);
 
 // === Error handling ===
 
