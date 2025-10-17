@@ -1,6 +1,10 @@
 {
   "devDependencies": {
-    "eslint-config-strict": "^14.0.1"
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.8.1",
+    "eslint-config-strict": "^14.0.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
   },
   "dependencies": {
     "dotenv": "^17.2.3",
@@ -8,5 +12,23 @@
     "joi": "^18.0.1",
     "mongodb": "^6.20.0",
     "pg": "^8.16.3"
-  }
+  },
+  "name": "roadmapbackend",
+  "description": "**Roadmap personal para aprender y practicar desarrollo Backend**   This repository contains a structured roadmap to master Backend development using Node.js, Express, databases, TypeScript, authentication, testing, and deployment.",
+  "version": "1.0.0",
+  "main": "eslint.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoseGodoy96/nodejs-backend-path.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JoseGodoy96/nodejs-backend-path/issues"
+  },
+  "homepage": "https://github.com/JoseGodoy96/nodejs-backend-path#readme"
 }
